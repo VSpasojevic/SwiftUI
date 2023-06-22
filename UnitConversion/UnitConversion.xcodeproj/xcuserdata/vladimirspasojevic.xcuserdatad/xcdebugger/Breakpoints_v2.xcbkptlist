@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "98074D79-F827-4FE8-A55E-F3994293E2D8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB156984-3878-4505-A1F9-60D2CCF6CE03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UnitConversion/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "convertedValue"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "936019DD-1568-4639-B590-6EF5020D3C2D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UnitConversion/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "conversionFactor"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "936019DD-1568-4639-B590-6EF5020D3C2D - 2860958295c76eae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UnitConversion.ContentView.convertedValue.getter : Swift.Double"
+                  moduleName = "UnitConversion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladimirspasojevic/Work/SwiftUI/UnitConversion/UnitConversion/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "936019DD-1568-4639-B590-6EF5020D3C2D - 48fb7501c09f88fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UnitConversion.ContentView.conversionFactor.getter : Swift.Double"
+                  moduleName = "UnitConversion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladimirspasojevic/Work/SwiftUI/UnitConversion/UnitConversion/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
