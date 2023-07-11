@@ -8,38 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showAlert = false
+
+    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+    var correctAnswer = Int.random(in: 0...2)
+
     var body: some View {
-        VStack {
-            Button("Button 1") {}
+        VStack(spacing: 30) {
+            Text("Tap the flag of: ")
+            Text(countries[correctAnswer])
 
-            Button("Button 2", role: .destructive) {}
-
-            Button("Button 3") {}
-                .buttonStyle(.bordered)
-                .tint(.cyan)
-            Spacer()
-            Button("Button 4") {}
-                .buttonStyle(.borderedProminent)
-            Spacer()
-            LinearGradient(colors: [.red, .white], startPoint: .leading, endPoint: .trailing)
-            Button("Show alert") {
-                showAlert = true
+            ForEach(0..<3) { number in
+                Button {
+                    print("Flag was tapped")
+                } label: {
+                    Image(countries[number])
+                }
+                .border(.gray)
             }
-            .alert("This is title for alert", isPresented: $showAlert) {
-                Button("Delete", role: .destructive) {}
-                Button("Cancel", role: .cancel) {}
-            } message: {
-                Text("Read the description carefully!")
-            }
-
-
-            LinearGradient(gradient: Gradient(stops: [
-                Gradient.Stop(color: .yellow, location: 0.3),
-                Gradient.Stop(color: .red, location: 0.7),
-            ]), startPoint: .top, endPoint: .bottom)
-
-
         }
     }
 }
