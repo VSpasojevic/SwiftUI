@@ -8,28 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
     var body: some View {
         VStack {
-            ZStack {
-                Color(red: 1, green: 0.8, blue: 0)
-                    .frame(width: 200, height: 200, alignment: .leading)
-                Text("Some text")
+            Button("Button 1") {}
+
+            Button("Button 2", role: .destructive) {}
+
+            Button("Button 3") {}
+                .buttonStyle(.bordered)
+                .tint(.cyan)
+            Spacer()
+            Button("Button 4") {}
+                .buttonStyle(.borderedProminent)
+            Spacer()
+            LinearGradient(colors: [.red, .white], startPoint: .leading, endPoint: .trailing)
+            Button("Show alert") {
+                showAlert = true
+            }
+            .alert("This is title for alert", isPresented: $showAlert) {
+                Button("Delete", role: .destructive) {}
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Read the description carefully!")
             }
 
-            ZStack {
-                Color(red: 0.8, green: 1, blue: 0)
-                    .frame(width: 200, height: 200, alignment: .leading)
-                Text("Some text")
-            }
 
-            ZStack {
-                Color.red
-                    .frame(width: 200, height: 200, alignment: .leading)
-                Text("Some text")
-                    .foregroundStyle(.secondary)
-                    .padding(20)
-                    .background(.ultraThinMaterial)
-            }
+            LinearGradient(gradient: Gradient(stops: [
+                Gradient.Stop(color: .yellow, location: 0.3),
+                Gradient.Stop(color: .red, location: 0.7),
+            ]), startPoint: .top, endPoint: .bottom)
+
+
         }
     }
 }
