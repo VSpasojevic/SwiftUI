@@ -15,6 +15,9 @@ struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
     @State private var correctAnswer = Int.random(in: 0...2)
 
+    @State private var numberOfQuestions = 8
+    @State private var currentQuestion = 0
+
     var body: some View {
         ZStack{
             RadialGradient( stops: [
@@ -52,9 +55,12 @@ struct ContentView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
                 .alert(scoreTitle, isPresented: $scoreShowing) {
-                    Button("Continue", action: askQuestion)
-                } message: {
-                    Text("Your score is : \(score)")
+                    if currentQuestion != numberOfQuestions {
+                        Button("Continue", action: askQuestion)
+                    } else {
+                        Button("Restart game", action: restartGame)
+                    }
+
                 }
 
                 Spacer()
@@ -70,11 +76,12 @@ struct ContentView: View {
     }
 
     func checkAnswer(_ number: Int) {
+        currentQuestion = currentQuestion + 1
         if number == correctAnswer {
             scoreTitle = "Correct"
             score = score + 1
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong! That's the flag of \(countries[number])"
             score = score - 1
         }
 
@@ -84,6 +91,12 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+    }
+
+    func restartGame() {
+        score = 0
+        currentQuestion = 0
+        askQuestion()
     }
 }
 
